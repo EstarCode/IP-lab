@@ -1,0 +1,10 @@
+# Reference materials and lecture notes
+lab-exercise-2026.pdf
+Chapter 2.pdf
+edge_print.pdf
+
+# IDE and system files
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
