@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+</head>
+<body id="top">
+
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="about.html">About Me</a> | 
+            <a href="skills.html">Skills and Education</a> | 
+            <a href="projects.html">Projects &amp; Achievements</a> | 
+            <a href="media.html">My Media and Interests</a> | 
+            <a href="contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>Contact Information</h2>
+            <p>
+                Email: <a href="mailto:abraham.tiruneh7@gmail.com">abraham.tiruneh7@gmail.com</a>
+            </p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Contact Form</h2>
+            <form action="submit.php" method="post">
+                <input type="hidden" name="form_source" value="portfolio_contact">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="full_name">Full Name:</label><br>
+                        <input type="text" id="full_name" name="full_name" placeholder="Abebe Bikila" required>
+                    </p>
+
+                    <p>
+                        <label for="user_email">Email Address:</label><br>
+                        <input type="email" id="user_email" name="user_email" placeholder="name@example.com" required>
+                    </p>
+
+                    <p>
+                        <label for="user_age">Age:</label><br>
+                        <input type="number" id="user_age" name="user_age" min="18" max="60" value="22" required>
+                    </p>
+
+                    <p>
+                        <label for="contact_date">Date:</label><br>
+                        <input type="date" id="contact_date" name="contact_date" required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+
+                    <p>
+                        <label for="user_country">Country:</label><br>
+                        <select id="user_country" name="user_country" required>
+                            <option value="">-- Select Country --</option>
+                            <optgroup label="Africa">
+                                <option value="ethiopia" selected>Ethiopia</option>
+                                <option value="kenya">Kenya</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="uganda">Uganda</option>
+                            </optgroup>
+                            <optgroup label="Other">
+                                <option value="usa">United States</option>
+                                <option value="germany">Germany</option>
+                                <option value="china">China</option>
+                                <option value="japan">Japan</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>
+                        <strong>Preferred Response:</strong><br>
+                        <input type="radio" id="response_email" name="preferred_response" value="email" checked>
+                        <label for="response_email">Email</label>
+                        &nbsp;&nbsp;
+                        <input type="radio" id="response_phone" name="preferred_response" value="phone">
+                        <label for="response_phone">Phone</label>
+                    </p>
+
+                    <p>
+                        <strong>Interest:</strong><br>
+                        <input type="checkbox" id="interest_software" name="interests[]" value="software">
+                        <label for="interest_software">Software Development</label>
+                        <br>
+                        <input type="checkbox" id="interest_academic" name="interests[]" value="academic" checked>
+                        <label for="interest_academic">Academic Collaboration</label>
+                        <br>
+                        <input type="checkbox" id="interest_general" name="interests[]" value="general">
+                        <label for="interest_general">General Inquiry</label>
+                    </p>
+
+                    <p>
+                        <label for="attachment">Attachment:</label><br>
+                        <input type="file" id="attachment" name="attachment">
+                    </p>
+
+                    <p>
+                        <label for="user_message">Message:</label><br>
+                        <textarea id="user_message" name="user_message" rows="6" cols="45" placeholder="Enter your message here..." required></textarea>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <p>
+                    <button type="submit">Submit</button>
+                    &nbsp;
+                    <button type="reset">Clear</button>
+                </p>
+            </form>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Social Links</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <p>
+                <a href="index.html">Back to Home</a>
+            </p>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Abraham Tiruneh. Department of Software Engineering, AASTU. All rights reserved.</p>
+        <p><a href="#top">Back to top</a></p>
+    </footer>
+
+</body>
+</html>
