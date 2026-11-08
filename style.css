@@ -3,21 +3,19 @@
     --bg-card: #ffffff;
     --bg-card-subtle: #f1f5f9;
     --text-primary: #0f172a;
-    --text-secondary: #475569;
+    --text-secondary: #334155;
     --text-muted: #64748b;
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
+    --primary: #1d4ed8;
+    --primary-hover: #1e40af;
     --primary-light: #eff6ff;
     --accent-emerald: #059669;
-    --accent-emerald-light: #ecfdf5;
     --border: #e2e8f0;
-    --border-focus: #3b82f6;
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
     --radius-sm: 6px;
     --radius-md: 10px;
-    --radius-lg: 16px;
+    --radius-lg: 14px;
     --radius-full: 9999px;
     --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -49,81 +47,69 @@ hr {
 }
 
 header {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: #ffffff;
     border-radius: var(--radius-lg);
-    padding: 44px 32px;
+    padding: 40px 32px 36px 32px;
     text-align: center;
     box-shadow: var(--shadow-lg);
     position: relative;
     overflow: hidden;
     margin-bottom: 28px;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(37, 99, 235, 0.35) 0%, transparent 70%);
-    border-radius: 50%;
-    pointer-events: none;
+    border: 1px solid #334155;
 }
 
 header h1 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     color: #ffffff;
 }
 
 header p strong {
     display: inline-block;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     color: #93c5fd;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
 }
 
 header p:nth-of-type(2) {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     color: #cbd5e1;
     font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
     margin-bottom: 20px;
+    letter-spacing: 0.02em;
 }
 
 header img {
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 18px auto;
     border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     transition: var(--transition);
     object-fit: cover;
 }
 
 header img:hover {
-    transform: scale(1.04);
+    transform: scale(1.03);
     border-color: #60a5fa;
 }
 
 header p:last-of-type {
-    max-width: 620px;
+    max-width: 640px;
     margin: 0 auto;
     color: #e2e8f0;
-    font-size: 1.05rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
 nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
     margin-top: 14px;
 }
@@ -133,7 +119,7 @@ nav a {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.92rem;
-    padding: 8px 16px;
+    padding: 7px 15px;
     background-color: var(--bg-card-subtle);
     border: 1px solid var(--border);
     border-radius: var(--radius-full);
@@ -144,7 +130,7 @@ nav a:hover {
     background-color: var(--primary);
     color: #ffffff;
     border-color: var(--primary);
-    transform: translateY(-2px);
+    transform: translateY(-1px);
     box-shadow: var(--shadow-sm);
 }
 
@@ -152,14 +138,14 @@ nav a[href="index.html"] {
     background-color: var(--primary);
     color: #ffffff;
     border-color: var(--primary);
-    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 2px 8px rgba(29, 78, 216, 0.3);
 }
 
 section {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
-    padding: 28px 30px;
+    padding: 26px 28px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
     margin-bottom: 22px;
@@ -171,10 +157,10 @@ section:hover {
 }
 
 h2 {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -183,10 +169,10 @@ h2 {
 h2::before {
     content: "";
     display: inline-block;
-    width: 5px;
-    height: 20px;
+    width: 4px;
+    height: 18px;
     background: var(--primary);
-    border-radius: var(--radius-sm);
+    border-radius: 2px;
 }
 
 section p {
@@ -201,13 +187,13 @@ section p:last-child {
 section a[href$=".html"] {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
     color: var(--primary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     padding: 6px 14px;
     background-color: var(--primary-light);
+    border: 1px solid #dbeafe;
     border-radius: var(--radius-full);
     transition: var(--transition);
 }
@@ -215,7 +201,7 @@ section a[href$=".html"] {
 section a[href$=".html"]:hover {
     background-color: var(--primary);
     color: #ffffff;
-    transform: translateX(3px);
+    border-color: var(--primary);
 }
 
 section p a:not([href$=".html"]) {
@@ -231,43 +217,42 @@ section p a:not([href$=".html"]):hover {
 
 ul {
     list-style: none;
-    margin: 14px 0 18px 0;
+    margin: 12px 0 16px 0;
     display: grid;
-    gap: 10px;
+    gap: 8px;
 }
 
 ul li {
     position: relative;
-    padding-left: 26px;
+    padding-left: 24px;
     color: var(--text-secondary);
     font-weight: 500;
 }
 
 ul li::before {
-    content: "✓";
+    content: "•";
     position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--accent-emerald);
-    font-weight: 800;
-    font-size: 0.95rem;
+    left: 4px;
+    top: -1px;
+    color: var(--primary);
+    font-size: 1.3rem;
+    line-height: 1;
 }
 
 blockquote {
-    background: linear-gradient(120deg, #eff6ff 0%, #f8fafc 100%);
+    background: #f8fafc;
     border-left: 4px solid var(--primary);
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
-    padding: 20px 24px;
+    padding: 18px 22px;
     margin: 8px 0;
-    font-style: italic;
-    font-size: 1.15rem;
-    color: var(--text-primary);
     box-shadow: var(--shadow-sm);
 }
 
 blockquote p {
     color: #1e3a8a;
+    font-style: italic;
     font-weight: 500;
+    font-size: 1.05rem;
     margin: 0;
 }
 
@@ -298,10 +283,10 @@ footer a:hover {
         padding: 16px 14px 40px 14px;
     }
     header {
-        padding: 32px 20px;
+        padding: 30px 18px;
     }
     header h1 {
-        font-size: 1.75rem;
+        font-size: 1.7rem;
     }
     nav {
         justify-content: center;
