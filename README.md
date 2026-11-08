@@ -1,100 +1,77 @@
 # Personal Profile Website
 
-> **Internet Programming I (SWEG3107)**  
-> Department of Software Engineering, Addis Ababa Science and Technology University (AASTU)  
-> Student: **Abraham Tiruneh**
+> **Course:** Internet Programming I (SWEG3107)  
+> **Institution:** Addis Ababa Science and Technology University (AASTU)  
+> **Department:** Department of Software Engineering  
+> **Student:** Abraham Tiruneh
 
-A multi-page personal portfolio website built with semantic HTML5 strictly adhering to the **SWEG3107 Lab Exercise** specifications. It demonstrates modern markup, media embedding, navigation hierarchy, tables, accessible forms, progress indicators, and rich content structure.
-
----
-
-## Styling Architecture (Three CSS Methodologies)
-
-To demonstrate mastery of all three CSS styling methodologies, an academic design system has been applied across **three designated pages** (leaving the remaining three pages in pure semantic HTML ready to be styled over time):
-
-1. **External CSS — [`index.html`](file:///c:/Users/hp/Desktop/ip/index.html)**
-   - **Method:** Links to an external master stylesheet [`style.css`](file:///c:/Users/hp/Desktop/ip/style.css) via `<link rel="stylesheet" href="style.css">`.
-   - **Features:** CSS custom properties (`:root`), global reset, responsive container, dark navy header banner, circular avatar with hover transitions, pill-shaped navigation, clean card elevations, and responsive media queries.
-
-2. **Internal CSS — [`about.html`](file:///c:/Users/hp/Desktop/ip/about.html)**
-   - **Method:** Uses a dedicated `<style>` block embedded inside the document's `<head>`.
-   - **Features:** Self-contained styling tailored to the page, featuring an academic slate/navy theme, active navigation pill on "About Me", multi-column grid layout for core values (`<dl>`, `<dt>`, `<dd>`), custom quote card, and styled timestamps (`<time>`).
-
-3. **Inline CSS — [`contact.html`](file:///c:/Users/hp/Desktop/ip/contact.html)**
-   - **Method:** Exclusively uses direct `style="..."` attributes on individual HTML tags (with zero `<link>` stylesheets and zero internal `<style>` tags).
-   - **Features:** Unified academic navy/slate theme, styled fieldsets with clean legend labels, polished form inputs (`text`, `email`, `tel`, `url`, `date`, `color`, `range`), and submit/reset action buttons.
-
-4. **Pure Semantic HTML Pages (To be styled over time):**
-   - **[`skills.html`](file:///c:/Users/hp/Desktop/ip/skills.html)**
-   - **[`projects.html`](file:///c:/Users/hp/Desktop/ip/projects.html)**
-   - **[`media.html`](file:///c:/Users/hp/Desktop/ip/media.html)**
+A multi-page personal portfolio developed as a practical laboratory project for Internet Programming I. This repository serves as a step-by-step learning platform for web technologies, starting with semantic HTML5 document structures, progressing through CSS layouts, and preparing for client-side JavaScript interactivity.
 
 ---
 
-## Website Structure
+## Learning & Implementation Roadmap
 
-The website consists of six core pages interconnected through a consistent navigation header:
+This project is built incrementally through practical laboratory exercises:
 
-1. **Home (`index.html`)**
-   - Profile hero section with student details and portrait.
-   - Global navigation menu linking all six pages.
-   - Summary preview linking to biography.
-   - Itemized goals list linking to skills and education.
-   - Personal motto block.
-   - Featured work preview linking to projects.
+1. **Phase 1: Semantic HTML5 (Current Foundation)**
+   - Standard document structure (`<!DOCTYPE html>`, `<head>`, `<body>`).
+   - Semantic content elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<footer>`).
+   - Hyperlinks and multi-page site navigation.
+   - Data presentation with tables (`<thead>`, `<tbody>`, `<caption>`).
+   - Built-in indicators and interactive disclosures (`<progress>`, `<meter>`, `<details>`, `<summary>`).
+   - Native multimedia embedding (`<audio>`, `<video>` with WebVTT captions, `<iframe>`).
+   - Comprehensive user input forms with fieldsets, legends, input types, and native validation.
 
-2. **About Me (`about.html`)**
-   - Biography and academic background at AASTU.
-   - Educational details with `<abbr>` tag.
-   - Key academic and extracurricular interests list.
-   - Core values structured with a description list (`<dl>`, `<dt>`, `<dd>`).
-   - Guiding principle quote block (`<blockquote>`).
-   - Future ambitions and learning journey with machine-readable date (`<time>`).
+2. **Phase 2: CSS Styling & Layout (In Progress)**
+   - Practicing the three fundamental CSS integration methods:
+     - **External Stylesheet:** Applied to `index.html` using a shared `style.css` file for site-wide rules.
+     - **Internal Stylesheet:** Applied to `about.html` using a `<style>` block in the document `<head>`.
+     - **Inline Styles:** Applied to `contact.html` using `style` attributes directly on HTML tags.
+   - Future practice: Progressively styling the remaining pages (`skills.html`, `projects.html`, `media.html`), applying Flexbox, CSS Grid, and responsive media queries.
 
-3. **Skills and Education (`skills.html`)**
-   - Educational background table (`<table>`, `<caption>`, `<thead>`, `<tbody>`).
-   - Core technical competencies table.
-   - Visual progress indicators using native HTML5 `<progress>` and `<meter>` elements.
-   - Foundational concepts description list (`<dl>`).
-   - Interactive disclosure widgets using `<details>` and `<summary>` for academic learning plans.
-   - External reference links to MDN and W3Schools documentation.
-
-4. **Projects & Achievements (`projects.html`)**
-   - Featured projects with `<article>`, `<figure>`, `<figcaption>`, and descriptive summaries.
-   - Categorized nested lists outlining system architectures and platform modules.
-   - Categorized achievements (Learning, Academic, Personal).
-   - Direct download link for project documentation (`files/project-report.pdf`).
-   - Future engineering milestones.
-
-5. **My Media and Interests (`media.html`)**
-   - Native HTML5 `<audio>` player with fallback formats (`.mp3`, `.wav`).
-   - Native HTML5 `<video>` player with poster image and timed subtitles (`captions.vtt`).
-   - Embedded educational resource using `<iframe>`.
-   - Categorized nested topics list outlining technical and personal pursuits.
-   - Curated technical documentation references.
-
-6. **Contact Me (`contact.html`)**
-   - Direct email contact and portfolio links.
-   - Comprehensive HTML5 form with 3 grouped fieldsets (`<fieldset>`, `<legend>`):
-     1. *Personal Information:* `text` (Full Name), `email` (Email Address), `tel` (Phone Number), and `url` (Website).
-     2. *Message Details:* `select` (Subject), `radio` (Discovery source), and `textarea` (Message).
-     3. *Optional Information:* `date` (Contact Date), `color` (Preferred Color), `range` (Rating), and `checkbox` (Reply requested).
-   - Submit and reset action buttons.
-   - Professional network links and return navigation.
+3. **Phase 3: JavaScript & Interactivity (Upcoming)**
+   - Client-side form validation and feedback.
+   - Dynamic DOM manipulation and content updates.
+   - Interactive UI behavior and event handling.
 
 ---
 
-## Assets & Media Directory (`files/`)
+## Website Pages
+
+The repository contains six interconnected pages:
+
+| Page | File | Purpose |
+| :--- | :--- | :--- |
+| **Home** | `index.html` | Welcome introduction, portrait image, navigation menu, and overview links. |
+| **About Me** | `about.html` | Personal biography, academic background, interests, core values, and quotes. |
+| **Skills & Education** | `skills.html` | Academic qualifications, technical competencies, learning progress indicators, and study plans. |
+| **Projects & Achievements** | `projects.html` | Project showcases with figures, architecture outlines, categorized achievements, and downloadable reports. |
+| **My Media & Interests** | `media.html` | Native audio and video playback, closed captions, embedded learning videos, and reference resources. |
+| **Contact Me** | `contact.html` | Direct email contact and a multi-section form with various input types and validation. |
+
+---
+
+## Media & Asset Files (`files/`)
+
+All static media and document files are organized inside the `files/` directory:
 
 - `profile.jpg`: Personal portrait image.
-- `preview.jpg`: Video poster and project preview thumbnail.
-- `movie.mp4`: Sample HTML5 video file.
-- `captions.vtt`: WebVTT captions track.
-- `sound.mp3` & `sound.wav`: Audio demo tracks.
-- `project-report.pdf`: Downloadable project specification report.
+- `preview.jpg`: Poster image for video playback and project previews.
+- `movie.mp4`: Sample video file for native video playback.
+- `captions.vtt`: WebVTT closed captions file for video accessibility.
+- `sound.mp3` & `sound.wav`: Audio tracks demonstrating format fallback support.
+- `project-report.pdf`: Sample downloadable project documentation report.
 
 ---
 
-## How to View
+## How to View the Project
 
-Open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari).
+1. Clone or download the repository to your local computer:
+   ```bash
+   git clone https://github.com/EstarCode/IP-lab.git
+   ```
+2. Navigate into the project folder:
+   ```bash
+   cd IP-lab
+   ```
+3. Open `index.html` in any modern web browser (Google Chrome, Microsoft Edge, Mozilla Firefox, or Safari).
