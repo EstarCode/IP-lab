@@ -3,18 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>About Me - Abraham Tiruneh</title>
+
+    <style>
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-subtle: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --accent: #8b5cf6;
+            --accent-light: #f5f3ff;
+            --accent-emerald: #059669;
+            --border: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            font-size: 16px;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 36px 20px 60px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 28px 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);
+            color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 40px 32px 32px 32px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 28px;
+            text-align: center;
+        }
+
+        .internal-css-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #8b5cf6, #6366f1);
+            color: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px rgba(139, 92, 246, 0.35);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        header p {
+            color: #c7d2fe;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.92rem;
+            padding: 8px 16px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #1e1b4b;
+            transform: translateY(-2px);
+        }
+
+        nav a[href="about.html"] {
+            background-color: #ffffff;
+            color: #1e1b4b;
+            border-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+        }
+
+        section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 28px 30px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 22px;
+            transition: var(--transition);
+        }
+
+        section:hover {
+            box-shadow: var(--shadow-md);
+            border-color: #cbd5e1;
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 5px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 4px;
+        }
+
+        section p {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        section p:last-child {
+            margin-bottom: 0;
+        }
+
+        abbr {
+            text-decoration: none;
+            border-bottom: 2px dotted var(--primary);
+            color: var(--primary);
+            font-weight: 600;
+            cursor: help;
+        }
+
+        ul {
+            list-style: none;
+            margin: 12px 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 28px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 4px;
+            top: 0;
+            color: var(--accent);
+            font-size: 1rem;
+        }
+
+        dl {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 14px;
+        }
+
+        dt {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        dt::before {
+            content: "•";
+            color: var(--accent-emerald);
+            font-size: 1.6rem;
+            line-height: 0;
+        }
+
+        dd {
+            background-color: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+
+        blockquote {
+            background: linear-gradient(120deg, #f5f3ff 0%, #ffffff 100%);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            padding: 20px 24px;
+            margin: 12px 0 16px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        blockquote p {
+            color: #4c1d95;
+            font-size: 1.15rem;
+            font-style: italic;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        time {
+            display: inline-block;
+            background-color: var(--accent-light);
+            color: var(--accent);
+            font-weight: 600;
+            padding: 2px 10px;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 24px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 6px 14px;
+            background-color: var(--primary-light);
+            border-radius: var(--radius-full);
+            margin: 0 4px;
+            transition: var(--transition);
+        }
+
+        footer a:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 16px 14px 40px 14px;
+            }
+            header {
+                padding: 30px 16px;
+            }
+            dl {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body id="top">
 
     <header>
+        <span class="internal-css-badge">Styled with Internal CSS</span>
         <h1>About Me</h1>
+        <p>Get to know the person behind the website.</p>
         <nav>
-            <a href="index.html">Home</a> | 
-            <a href="about.html">About Me</a> | 
-            <a href="skills.html">Skills and Education</a> | 
-            <a href="projects.html">Projects &amp; Achievements</a> | 
-            <a href="media.html">My Media and Interests</a> | 
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="skills.html">Skills &amp; Education</a>
+            <a href="projects.html">Projects &amp; Achievements</a>
+            <a href="media.html">My Media &amp; Interests</a>
             <a href="contact.html">Contact Me</a>
         </nav>
     </header>
@@ -23,87 +324,105 @@
 
     <main>
         <section>
-            <h2>Biography</h2>
+            <h2>My Story</h2>
             <p>
-                My name is <strong>Abraham Tiruneh</strong>. I am an undergraduate student studying 
-                <strong>Software Engineering</strong> at 
-                <abbr title="Addis Ababa Science and Technology University">AASTU</abbr>.
+                My name is <strong>Abraham Tiruneh</strong>. I am a curious and motivated person who enjoys
+                learning, exploring new ideas, and improving myself every day.
             </p>
             <p>
-                I am interested in software design, web development, algorithms, and database management. 
-                My goal is to create reliable and scalable software solutions.
+                I believe that every experience, whether success or failure, provides an opportunity to learn and grow.
             </p>
         </section>
 
         <hr>
 
         <section>
-            <h2>Educational Background</h2>
-            <table border="1">
-                <caption>Education</caption>
-                <tr>
-                    <th>Degree</th>
-                    <th>Institution</th>
-                </tr>
-                <tr>
-                    <td>B.Sc. in Software Engineering</td>
-                    <td>AASTU (2022 &ndash; 2027)</td>
-                </tr>
-                <tr>
-                    <td>Preparatory School</td>
-                    <td>High School Diploma (2018 &ndash; 2022)</td>
-                </tr>
-            </table>
+            <h2>My Background</h2>
+            <p>
+                I am currently pursuing my education in <strong>Software Engineering</strong> at
+                <abbr title="Addis Ababa Science and Technology University">AASTU</abbr> and developing knowledge
+                that will help me build a meaningful career. My goal is to use what I learn to solve problems
+                and contribute positively to society.
+            </p>
         </section>
 
         <hr>
 
         <section>
-            <h2>Interests</h2>
-            <h3>Technical Interests</h3>
+            <h2>My Interests and Hobbies</h2>
+            <p>Some activities I enjoy include:</p>
             <ul>
-                <li>Web Engineering and Full-Stack Development</li>
-                <li>Agricultural Technology Platforms</li>
-                <li>Database Management Systems</li>
-            </ul>
-
-            <h3>Personal Interests</h3>
-            <ul>
-                <li>Playing Chess</li>
-                <li>Reading Books</li>
-                <li>Nature and Ambient Music</li>
+                <li>Reading books and learning new things</li>
+                <li>Exploring technology and web development</li>
+                <li>Listening to music</li>
+                <li>Playing sports and staying active</li>
+                <li>Spending time with family and friends</li>
             </ul>
         </section>
 
         <hr>
 
         <section>
-            <h2>Quotations</h2>
-            <blockquote>
-                <p>&ldquo;The best way to predict the future is to invent it.&rdquo;</p>
-                <cite>&mdash; Alan Kay</cite>
+            <h2>My Values</h2>
+            <dl>
+                <div>
+                    <dt>Integrity</dt>
+                    <dd>Being honest and doing what is right.</dd>
+                </div>
+
+                <div>
+                    <dt>Discipline</dt>
+                    <dd>Working consistently toward my goals.</dd>
+                </div>
+
+                <div>
+                    <dt>Respect</dt>
+                    <dd>Valuing other people and their perspectives.</dd>
+                </div>
+
+                <div>
+                    <dt>Continuous Learning</dt>
+                    <dd>Remaining curious and open to improvement.</dd>
+                </div>
+            </dl>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>A Lesson I Believe In</h2>
+
+            <blockquote style="box-shadow: 0 4px 12px rgba(139, 92, 246, 0.12);">
+                <p>&ldquo;The journey of a thousand miles begins with a single step.&rdquo;</p>
             </blockquote>
-
             <p>
-                Steve Jobs once said, <q>Computers are like a bicycle for our minds.</q>
+                This reminds me that meaningful achievements begin with small actions and consistent effort.
             </p>
         </section>
 
         <hr>
 
         <section>
-            <h2>Dates</h2>
-            <p>Enrolled: <time datetime="2022-09-15">September 15, 2022</time></p>
-            <p>Expected Graduation: <time datetime="2027-07-10">July 2027</time></p>
-            <p>Last Updated: <time datetime="2026-10-29">October 29, 2026</time></p>
+            <h2>My Future Ambitions</h2>
+            <p>
+                I want to become a skilled professional, build meaningful relationships, continue learning,
+                and use my abilities to make a positive difference.
+            </p>
+            <p>
+                I know that achieving these ambitions will require patience, effort, and a willingness to keep improving.
+            </p>
         </section>
 
         <hr>
 
         <section>
+            <h2>My Learning Journey</h2>
             <p>
-                <a href="contact.html">Contact Me</a> | 
-                <a href="index.html">Back to Home</a>
+                I started learning HTML to understand how websites are built. I plan to continue learning
+                web technologies and applying them to practical projects.
+            </p>
+            <p>
+                This page was last updated on <time datetime="2026-10-27">October 27, 2026</time>.
             </p>
         </section>
     </main>
@@ -111,8 +430,11 @@
     <hr>
 
     <footer>
-        <p>&copy; 2026 Abraham Tiruneh. Department of Software Engineering, AASTU. All rights reserved.</p>
-        <p><a href="#top">Back to top</a></p>
+        <p>&copy; 2026 Abraham Tiruneh. Personal website.</p>
+        <p>
+            <a href="contact.html">Contact Me &rarr;</a>
+            <a href="index.html">&larr; Return to Home</a>
+        </p>
     </footer>
 
 </body>
